@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "119559220107",
+    "project_id": "send-data-d75bd",
+    "storage_bucket": "send-data-d75bd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:119559220107:android:348cec2af55b7e8cefdd8e",
+        "android_client_info": {
+          "package_name": "com.example.sendtest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "119559220107-shahap17bcil7ssu99qpqvafan25e70c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOy5gaDzX9dOCg96Oay24Q6g2wyXsr5N4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "119559220107-shahap17bcil7ssu99qpqvafan25e70c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
