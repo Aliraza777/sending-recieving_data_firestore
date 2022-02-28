@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
-import 'package:sendtest/addManager.dart';
+import 'package:sendtest/showManager.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       // home: const TestSend(),
-      home: AddManager(),
+      home: ShowManagers(),
     );
   }
 }
@@ -46,12 +46,6 @@ class _TestSendState extends State<TestSend> {
   }
 
   Future<void> _activateListners() async {
-    // DatabaseEvent event = await _database.child('manager');
-    //
-    // var map = Map<String, dynamic>();
-    // DatabaseEvent event = await _database.child("manager").once();
-    // Map<String, dynamic> data = Map<String, dynamic>.from(snapshot.value);
-
     _dailyReport = _database.child('manager').onValue.listen((event) {
       final data = event.snapshot.value as Map<dynamic, dynamic>;
       final name = data['name'] as String;

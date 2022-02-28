@@ -1,7 +1,7 @@
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:sendtest/main.dart';
+import 'package:sendtest/showManager.dart';
 
 class AddManager extends StatefulWidget {
   const AddManager({Key? key}) : super(key: key);
@@ -132,19 +132,6 @@ class _AddManagerState extends State<AddManager> {
                 ),
                 ElevatedButton(
                     onPressed: () async {
-                      // try {
-                      //   await database.child('manager/').set({
-                      //     'name': name,
-                      //     'email': email,
-                      //     'phone_no.': phoneNo,
-                      //     'service': value,
-                      //   });
-                      // } catch (e) {
-                      //   print("You got an error!");
-                      // }
-                      // Utils.showSnackBar("Complain Added");
-                      // Navigator.push(context,
-                      //     MaterialPageRoute(builder: (_) => DashboardScreen()));
                       add();
                     },
                     child: Text("Add Manager"))
@@ -174,8 +161,6 @@ class _AddManagerState extends State<AddManager> {
         child: CircularProgressIndicator(),
       ),
     );
-// var map = Map<String, dynamic>();
-
     try {
       final map = <String, dynamic>{
         'name': name.text,
@@ -190,6 +175,6 @@ class _AddManagerState extends State<AddManager> {
     }
     print("complain added");
     Navigator.pop(context);
-    Navigator.push(context, MaterialPageRoute(builder: (_) => TestSend()));
+    Navigator.push(context, MaterialPageRoute(builder: (_) => ShowManagers()));
   }
 }
